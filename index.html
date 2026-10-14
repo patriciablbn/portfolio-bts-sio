@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Lucas Martin, étudiant en BTS SIO option SISR, spécialisé en systèmes, réseaux et cybersécurité.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f4f4ef">
+    <title>Lucas Martin — Portfolio SISR</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+    <header class="site-header">
+      <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
+        <span class="brand-mark" aria-hidden="true">LM</span>
+        <span>Lucas Martin</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <a href="#presentation" data-i18n="nav_about">Présentation</a>
+        <a href="#competences" data-i18n="nav_skills">Compétences</a>
+        <a href="#realisations" data-i18n="nav_work">Réalisations</a>
+        <a href="#veille" data-i18n="nav_watch">Veille</a>
+      </nav>
+      <div class="header-actions">
+        <button class="language-toggle" type="button" aria-label="Afficher le site en anglais">FR <span>/</span> EN</button>
+        <button class="theme-toggle" type="button" aria-label="Activer le thème sombre">
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Navigation mobile" hidden>
+        <a href="#presentation" data-i18n="nav_about">Présentation</a>
+        <a href="#competences" data-i18n="nav_skills">Compétences</a>
+        <a href="#realisations" data-i18n="nav_work">Réalisations</a>
+        <a href="#veille" data-i18n="nav_watch">Veille</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span><span data-i18n="available">Disponible pour une alternance</span></p>
+          <h1 id="hero-title"><span data-i18n="hero_1">Administrer.</span><br><span data-i18n="hero_2">Sécuriser.</span> <em data-i18n="hero_3">Connecter.</em></h1>
+          <p class="hero-intro" data-i18n="hero_intro">Étudiant en BTS SIO option SISR, je transforme les enjeux d'infrastructure en solutions fiables, documentées et sécurisées.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#realisations"><span data-i18n="discover">Découvrir mes projets</span><span aria-hidden="true">↘</span></a>
+            <a class="button text-button" href="#contact"><span data-i18n="contact_me">Me contacter</span><span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="terminal-card">
+            <div class="terminal-top"><span></span><span></span><span></span><small>lucas@homelab:~</small></div>
+            <pre><span class="muted">$</span> systemctl status portfolio
+<span class="green">●</span> portfolio.service
+  Active: <span class="green">active (running)</span>
+
+<span class="muted">$</span> whoami
+student · sysadmin · curious
+
+<span class="muted">$</span> uptime
+learning since day one<span class="cursor">▋</span></pre>
+          </div>
+          <span class="floating-label label-one">SISR</span><span class="floating-label label-two">{ secure_by_design }</span>
+        </div>
+        <a class="scroll-hint" href="#presentation"><span data-i18n="scroll">Faire défiler</span><i></i></a>
+      </section>
+
+      <section class="section about" id="presentation" aria-labelledby="about-title">
+        <div class="section-heading reveal"><p class="index">01 — <span data-i18n="nav_about">Présentation</span></p><h2 id="about-title" data-i18n="about_title">Un profil technique,<br>une vision concrète.</h2></div>
+        <div class="about-grid">
+          <div class="portrait reveal"><div class="portrait-monogram">LM</div><p>20 ans · France</p></div>
+          <div class="about-copy reveal">
+            <p class="lead" data-i18n="about_lead">Je m'appelle Lucas, étudiant passionné par l'administration des systèmes et des réseaux.</p>
+            <p data-i18n="about_body">Mon parcours en BTS Services Informatiques aux Organisations m'apprend à concevoir, déployer et maintenir des infrastructures disponibles et sûres. J'aime comprendre ce qui se passe derrière l'écran, automatiser les tâches répétitives et partager une documentation claire.</p>
+            <dl class="facts"><div><dt data-i18n="education">Formation</dt><dd>BTS SIO · SISR</dd></div><div><dt data-i18n="location">Localisation</dt><dd>France</dd></div><div><dt data-i18n="goal">Objectif</dt><dd data-i18n="goal_value">Administrateur systèmes & réseaux</dd></div></dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="competences" aria-labelledby="skills-title">
+        <div class="section-heading reveal"><p class="index">02 — <span data-i18n="nav_skills">Compétences</span></p><h2 id="skills-title" data-i18n="skills_title">Des fondations solides<br>pour des systèmes fiables.</h2></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><span class="skill-number">01</span><div class="skill-icon">⌁</div><h3 data-i18n="systems">Systèmes</h3><p data-i18n="systems_text">Administration, virtualisation et déploiement de services.</p><ul><li>Linux · Windows Server</li><li>Active Directory · GPO</li><li>Proxmox · VMware</li></ul></article>
+          <article class="skill-card reveal"><span class="skill-number">02</span><div class="skill-icon">◇</div><h3 data-i18n="networks">Réseaux</h3><p data-i18n="networks_text">Conception et maintien d'architectures réseau.</p><ul><li>TCP/IP · VLAN · Routage</li><li>DNS · DHCP · VPN</li><li>Cisco · Stormshield</li></ul></article>
+          <article class="skill-card reveal"><span class="skill-number">03</span><div class="skill-icon">⌾</div><h3 data-i18n="security">Cybersécurité</h3><p data-i18n="security_text">Réduction des risques et bonnes pratiques opérationnelles.</p><ul><li>Durcissement · Pare-feu</li><li>Sauvegarde · Supervision</li><li>Analyse de vulnérabilités</li></ul></article>
+          <article class="skill-card reveal"><span class="skill-number">04</span><div class="skill-icon">&gt;_</div><h3 data-i18n="automation">Automatisation</h3><p data-i18n="automation_text">Scripts reproductibles et documentation maintenable.</p><ul><li>PowerShell · Bash</li><li>Git · Ansible</li><li>GLPI · Zabbix</li></ul></article>
+        </div>
+      </section>
+
+      <section class="section projects" id="realisations" aria-labelledby="projects-title">
+        <div class="section-heading reveal"><p class="index">03 — <span data-i18n="nav_work">Réalisations professionnelles</span></p><h2 id="projects-title" data-i18n="projects_title">Apprendre en faisant.</h2></div>
+        <div class="project-list">
+          <article class="project reveal"><div class="project-meta"><span>2025</span><span data-i18n="school_project">Projet d'atelier</span></div><div class="project-body"><p class="project-count">01</p><h3 data-i18n="project1_title">Infrastructure haute disponibilité</h3><p data-i18n="project1_text">Conception d'une infrastructure virtualisée avec segmentation réseau, annuaire centralisé et stratégie de sauvegarde.</p><div class="tags"><span>Proxmox</span><span>Windows Server</span><span>VLAN</span><span>Veeam</span></div></div><div class="project-shape shape-one" aria-hidden="true"></div></article>
+          <article class="project reveal"><div class="project-meta"><span>2025</span><span data-i18n="internship">Stage en entreprise</span></div><div class="project-body"><p class="project-count">02</p><h3 data-i18n="project2_title">Supervision du parc informatique</h3><p data-i18n="project2_text">Déploiement d'une supervision proactive et création de tableaux de bord pour anticiper les incidents.</p><div class="tags"><span>Zabbix</span><span>Grafana</span><span>SNMP</span><span>Linux</span></div></div><div class="project-shape shape-two" aria-hidden="true"></div></article>
+          <article class="project reveal"><div class="project-meta"><span>2024</span><span>Homelab</span></div><div class="project-body"><p class="project-count">03</p><h3 data-i18n="project3_title">Laboratoire réseau sécurisé</h3><p data-i18n="project3_text">Création d'un environnement isolé pour expérimenter le routage, les règles de filtrage et l'accès distant.</p><div class="tags"><span>pfSense</span><span>WireGuard</span><span>Docker</span><span>Ansible</span></div></div><div class="project-shape shape-three" aria-hidden="true"></div></article>
+        </div>
+      </section>
+
+      <section class="section watch" id="veille" aria-labelledby="watch-title">
+        <div class="section-heading reveal"><p class="index">04 — <span data-i18n="nav_watch">Veille technologique</span></p><h2 id="watch-title" data-i18n="watch_title">Comprendre aujourd'hui<br>pour sécuriser demain.</h2></div>
+        <div class="watch-grid">
+          <div class="watch-feature reveal"><span class="topic-label" data-i18n="watch_topic">Sujet de veille 2025–2026</span><h3 data-i18n="watch_subject">Zero Trust : repenser la confiance dans le réseau</h3><p data-i18n="watch_text">J'étudie l'évolution du modèle « ne jamais faire confiance, toujours vérifier » : identité, micro-segmentation et contrôle continu des accès.</p><div class="watch-method"><strong data-i18n="method">Ma méthode</strong><span data-i18n="method_value">Collecter → Vérifier → Synthétiser → Partager</span></div></div>
+          <aside class="sources reveal"><h3 data-i18n="sources">Sources suivies</h3><a href="https://www.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer"><span>ANSSI</span><small data-i18n="recommendations">Recommandations & alertes</small><b>↗</b></a><a href="https://www.cert.ssi.gouv.fr/" target="_blank" rel="noopener noreferrer"><span>CERT-FR</span><small data-i18n="vulnerabilities">Vulnérabilités</small><b>↗</b></a><a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener noreferrer"><span>CISA</span><small>Cybersecurity advisories</small><b>↗</b></a><a href="https://www.cnil.fr/" target="_blank" rel="noopener noreferrer"><span>CNIL</span><small data-i18n="privacy">Données & vie privée</small><b>↗</b></a></aside>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <p class="index reveal">05 — <span data-i18n="nav_contact">Contact</span></p><div class="contact-layout"><h2 id="contact-title" class="reveal"><span data-i18n="contact_title">Construisons quelque</span><br><em data-i18n="contact_title_2">chose d'utile.</em></h2><div class="contact-copy reveal"><p data-i18n="contact_text">Une opportunité, un projet ou simplement envie d'échanger autour de l'infrastructure ? Écrivez-moi directement.</p><a class="email-link" href="mailto:lucas.martin@example.com">lucas.martin@example.com <span>↗</span></a><p class="privacy-note" data-i18n="privacy_note">Aucun formulaire, cookie analytique ou traceur : ce site ne collecte aucune donnée personnelle.</p></div></div>
+      </section>
+    </main>
+    <footer><a class="brand" href="#accueil"><span class="brand-mark">LM</span><span>Lucas Martin</span></a><p>© <span id="year">2026</span> · <span data-i18n="footer">Conçu avec attention et curiosité.</span></p><a href="#accueil" class="back-top"><span data-i18n="back_top">Retour en haut</span> ↑</a></footer>
+  </body>
+</html>
