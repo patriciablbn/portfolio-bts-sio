@@ -1,0 +1,93 @@
+/* Une ambiance Monterey nocturne, sans image de fond ni animation. */
+:root {
+  /* Palette : fonds, textes et accents. */
+  --fond: #110c28;
+  --prune: #522075;
+  --indigo: #29206b;
+  --texte: #f8f5ff;
+  --accent: #e2b6ff;
+  --texte-secondaire: #ded7e8;
+  --texte-discret: #c6b9d6;
+  --blanc: #fff;
+  --separateur: #ffffff26;
+  --focus: #e9b5ff;
+  --navigation: #dfabff;
+  --navigation-inactive: #c0b5d0;
+  --surtitre: #d7b9f5;
+  --bordure: #b99cce;
+  --bouton: #eee2f8;
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 100% 70%, var(--prune) 0, transparent 55%),
+    radial-gradient(ellipse at 0 100%, var(--indigo) 0, transparent 60%), var(--fond);
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 6px; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; padding: 1rem; background: var(--fond); }
+.skip-link:focus { top: 1rem; z-index: 1; }
+
+header, main, footer { width: min(1120px, 90%); margin-inline: auto; }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--separateur);
+}
+.identity { font-size: 1rem; white-space: nowrap; }
+nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; }
+nav a { padding-bottom: .4rem; border-bottom: 2px solid var(--navigation); }
+nav span { color: var(--navigation-inactive); }
+
+.introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 980px;
+  margin-inline: auto;
+  min-height: calc(100svh - 170px);
+  padding-block: 4rem;
+}
+.eyebrow { color: var(--surtitre); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+.greeting { margin: 2.5rem 0 1rem; font-size: 1.3rem; }
+h1 { margin: 0; font-size: clamp(2.7rem, 5vw, 4.5rem); line-height: 1.08; letter-spacing: -.045em; }
+h1 span { color: var(--accent); }
+h2 { margin: 1.5rem 0; font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 500; }
+.presentation { max-width: 560px; color: var(--texte-secondaire); font-size: 1.05rem; line-height: 1.8; }
+.presentation strong { color: var(--blanc); font-weight: 600; }
+.documents { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+button {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: .9rem 1.2rem;
+  border: 1px solid var(--bordure);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--bouton);
+  font: inherit;
+}
+button:disabled { cursor: not-allowed; }
+.document-note { color: var(--texte-discret); font-size: .8rem; }
+.portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border: 5px solid var(--blanc); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transform: scale(1.12); }
+footer { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--separateur); padding-block: 1.5rem; color: var(--texte-discret); font-size: .8rem; }
+
+@media (max-width: 800px) {
+  header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  nav { gap: 1rem; }
+  .introduction { grid-template-columns: 1fr; gap: 2.5rem; min-height: auto; padding-block: 2.5rem; }
+  .portrait { width: min(340px, 100%); }
+  .greeting { margin-top: 2rem; }
+  footer { flex-wrap: wrap; }
+}

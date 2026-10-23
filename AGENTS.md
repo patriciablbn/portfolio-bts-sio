@@ -29,7 +29,7 @@
 - Portrait : format vertical accepté, cadrage souhaité juste sous les aisselles ; réglage précis reporté par la propriétaire.
 - Formation confirmée : BTS SIO option SISR à IPSSI Paris, en alternance.
 - Entreprise indiquée par la propriétaire : Ascens Paris, présentée comme filiale DSI d'Africa Global Logistic ; affichage public autorisé. Conserver cette information comme déclaration personnelle, sans inventer de précisions sur la structure juridique ou les missions.
-- Texte d'accueil validé : « Technicienne Support IT en alternance au sein de la DSI d’AGL (Africa Global Logistic), je prépare un BTS SIO option SISR à IPSSI Paris. » Mettre AGL au premier plan à l'accueil ; expliquer Ascens Paris dans la rubrique Entreprise.
+- Texte d'accueil validé : « Technicienne Support IT en alternance au sein de la DSI de Africa Global Logistic (AGL), je prépare un BTS SIO option SISR à IPSSI Paris. » Mettre « Africa Global Logistic (AGL) » et « BTS SIO option SISR à IPSSI Paris » en gras. Mettre AGL au premier plan à l'accueil ; expliquer Ascens Paris dans la rubrique Entreprise.
 - Présentation d'IPSSI Paris à prévoir, emplacement à valider. Reformuler à partir du site officiel et conserver la source.
 - Ne pas garantir zéro panne : vérifier les fonctions, les liens, les langues, les thèmes et le rendu avant livraison.
 
