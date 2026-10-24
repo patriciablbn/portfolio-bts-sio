@@ -45,7 +45,8 @@ header {
 }
 .identity { font-size: 1rem; white-space: nowrap; }
 nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; }
-nav a { padding-bottom: .4rem; border-bottom: 2px solid var(--navigation); }
+nav a { padding-bottom: .4rem; border-bottom: 2px solid transparent; }
+nav a[aria-current], nav a:hover { border-bottom-color: var(--navigation); }
 nav span { color: var(--navigation-inactive); }
 
 .introduction {
@@ -92,6 +93,8 @@ button:disabled { cursor: not-allowed; }
 }
 .about h2 { margin: 0; color: var(--accent); }
 .about-text { max-width: 65ch; color: var(--texte-secondaire); line-height: 1.75; }
+.about-text h3 { margin: 2rem 0 .75rem; color: var(--accent); font-size: 1.15rem; font-weight: 700; }
+.about-text h3:first-child { margin-top: 0; }
 .about-text p { margin: 0 0 1.25rem; }
 .about-text p:last-child { margin-bottom: 0; }
 .about-text strong { color: var(--texte); font-weight: 600; }
