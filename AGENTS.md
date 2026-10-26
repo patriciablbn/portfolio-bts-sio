@@ -1,6 +1,7 @@
 # Consignes du portfolio personnel
 
 ## Collaboration
+- Style du site : ne pas mettre de point final aux paragraphes ; conserver la ponctuation entre les phrases et les points des abréviations.
 - Organisation Git : travailler sur une branche par étape cohérente, avec des noms explicites (`chore/…`, `feat/…`, `fix/…`). Garder `main` comme version validée. Préparer les changements localement, vérifier et expliquer le diff, puis obtenir la validation de la propriétaire avant publication ou fusion. Ne pas créer une branche par petite retouche. Ne pas réécrire l'historique partagé ni supprimer de branche distante sans décision explicite.
 - Travailler étape par étape, avec une explication courte du code et des choix.
 - La propriétaire prend chaque décision : présenter la prochaine étape et attendre sa validation avant de modifier le site.
@@ -28,6 +29,13 @@
 - Décision ultérieure : palette Monterey seule, sans jaune Patounails. Portrait professionnel fourni le 23 octobre 2026 ; bordure blanche souhaitée. Taille et cadrage à valider ; conserver l'original intact et privilégier le CSS pour le cadrage d'affichage.
 - Portrait : format vertical accepté, cadrage souhaité juste sous les aisselles ; réglage précis reporté par la propriétaire.
 - Formation confirmée : BTS SIO option SISR à IPSSI Paris, en alternance.
+- Baccalauréat général littéraire : option LV1 approfondie (anglais), à afficher sous l’intitulé du diplôme.
+- Établissements dans le parcours : « IPSSI, Paris 12ème » et « Le Wagon, Paris 11ème ». Écrire la durée « 9 semaines » en chiffres.
+- Entreprise dans le parcours : « Africa Global Logistic (AGL), Puteaux 92 ».
+- Affichage des périodes validé ensuite : années en gras sur la première ligne (ex. « 2025–2027 »), mois abrégés plus petits en dessous (ex. « sept. – mai »). Pour une période sur une seule année, afficher cette année une seule fois. Conserver les dates complètes ci-dessous comme référence de contenu.
+- Hiérarchie du parcours : diplôme, formation ou poste en titre principal ; établissement ou entreprise en plus petit dessous. Timeline avec ligne verticale et points. Établissement du baccalauréat validé : Lycée Molière, Paris 16ème.
+- Parcours validé : IPSSI Paris, sept. 2025 - mai 2027 ; Le Wagon Paris, juil. 2021 - sept. 2021, formation intensive de neuf semaines en développement web ; baccalauréat général littéraire, sept. 2014 - juil. 2018. Expérience à afficher : AGL uniquement, Technicienne Support IT en alternance, sept. 2025 - juil. 2027. Les fins de formation et de contrat à venir sont prévisionnelles. Dates homogènes : mois abrégé et année pour le début et la fin, « juil. » pour juillet et « juin » pour juin. Présentation souhaitée : formations et expérience dans une rubrique « Mon parcours » compacte, sans grandes cartes.
+- Période IPSSI Paris validée : 2025–2027. Ne pas mentionner F2i. La section « Ma formation » exprime le vécu personnel validé : qualité du suivi pédagogique, bienveillance, accompagnement, outils et ressources ; ne pas le présenter comme une description officielle de l’établissement.
 - Entreprise indiquée par la propriétaire : Ascens Paris, présentée comme filiale DSI d'Africa Global Logistic ; affichage public autorisé. Conserver cette information comme déclaration personnelle, sans inventer de précisions sur la structure juridique ou les missions.
 - Texte d'accueil validé : « Technicienne Support IT en alternance au sein de la DSI de Africa Global Logistic (AGL), je prépare un BTS SIO option SISR à IPSSI Paris. » Mettre « Africa Global Logistic (AGL) » et « BTS SIO option SISR à IPSSI Paris » en gras. Mettre AGL au premier plan à l'accueil ; expliquer Ascens Paris dans la rubrique Entreprise.
 - Présentation d'IPSSI Paris à prévoir, emplacement à valider. Reformuler à partir du site officiel et conserver la source.
