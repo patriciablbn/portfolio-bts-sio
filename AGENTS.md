@@ -42,6 +42,8 @@
 - Ne pas garantir zéro panne : vérifier les fonctions, les liens, les langues, les thèmes et le rendu avant livraison.
 
 ## Architecture à valider avant réalisation
+La rubrique Entreprise a été autorisée sur `feat/entreprise-agl`, avec un accès dans la navigation. Missions déclarées : support sur site via Ascens Care, préparation des arrivées/départs, remastérisation des PC, mise en service de PC préenrôlés, configuration d’iPhone avec Microsoft Intune et applications Microsoft. Architecture/Audit : observation depuis janvier 2026, intégration renforcée en deuxième année, participation au suivi de projets avec un chef de projet, observation de remédiation de pare-feu et de scripts auprès d’un alternant en master. HPE Aruba Central en lecture seule ; accès à FortiManager sans intervention à ce stade. Ne pas attribuer la réalisation des remédiations, des scripts ou le préenrôlement initial à la propriétaire.
+
 Le synoptique fourni par la propriétaire demande les rubriques suivantes. Les exemples de projets et de certifications ne sont pas ses réalisations et ne doivent pas être présentés comme acquises.
 - Accueil : présentation personnelle, BTS SIO, rôle en entreprise, CV à jour, entreprise, école.
 - Épreuves : E5 et tableau de synthèse ; E6 et deux fiches de situation (réseau et système), selon le document fourni. Confirmer les intitulés applicables à sa session.

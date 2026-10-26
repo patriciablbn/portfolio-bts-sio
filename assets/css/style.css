@@ -116,6 +116,9 @@ button:disabled { cursor: not-allowed; }
 .timeline p { margin-bottom: .75rem; }
 .timeline p strong { font-weight: 700; }
 .timeline .institution { color: var(--texte-discret); font-size: .9rem; }
+.missions { margin: 0; padding-left: 1.2rem; }
+.missions li { padding-left: .25rem; margin-bottom: .85rem; }
+.missions li::marker { color: var(--accent); }
 footer { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--separateur); padding-block: 1.5rem; color: var(--texte-discret); font-size: .8rem; }
 
 @media (max-width: 800px) {
