@@ -51,7 +51,12 @@ header {
   border-bottom: 1px solid var(--separateur);
 }
 .identity { font-size: 1rem; white-space: nowrap; }
-nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; }
+.header-profile { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+.socials { display: flex; gap: .75rem; font-size: .8rem; color: var(--accent); }
+.socials a { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: var(--texte); }
+.socials svg { width: 22px; height: 22px; }
+.socials a:hover { color: var(--accent); }
+nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; color: var(--texte); }
 nav a { padding-bottom: .4rem; border-bottom: 2px solid transparent; }
 nav a[aria-current] { border-bottom-color: var(--navigation); }
 nav a:hover { color: var(--accent); }
@@ -119,6 +124,21 @@ button:disabled { cursor: not-allowed; }
 .missions { margin: 0; padding-left: 1.2rem; }
 .missions li { padding-left: .25rem; margin-bottom: .85rem; }
 .missions li::marker { color: var(--accent); }
+details { border-bottom: 1px solid var(--separateur); padding-block: 1rem; }
+summary { cursor: pointer; color: var(--accent); font-size: 1.1rem; font-weight: 700; }
+summary { list-style: none; display: flex; align-items: baseline; gap: .7rem; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "›"; display: inline-block; transition: transform .22s ease-out; }
+details[open]:not(.closing) > summary::before { transform: rotate(90deg); }
+summary:focus-visible, .project-track:focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; }
+.disclosure-content { padding-top: 1rem; }
+.disclosure-content h3 { margin-top: 1rem; }
+.institution { color: var(--texte-discret); font-size: .9rem; }
+.project-content { min-width: 0; width: 100%; }
+.project-nav { margin-bottom: 1rem; }
+.project-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: .25rem .25rem 1rem; }
+.project-card { flex: 0 0 min(85%, 340px); min-width: 0; padding: 1.25rem; border: 1px solid var(--bordure); border-radius: 4px; scroll-snap-align: start; }
+.project-card h3 { margin-top: .5rem; }
 footer { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--separateur); padding-block: 1.5rem; color: var(--texte-discret); font-size: .8rem; }
 
 @media (max-width: 800px) {
@@ -134,5 +154,6 @@ footer { display: flex; justify-content: space-between; gap: 1rem; border-top: 1
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html, .project-track { scroll-behavior: auto; }
+  summary::before { transition: none; }
 }

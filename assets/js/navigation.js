@@ -1,6 +1,20 @@
 // Le lien actif suit la rubrique atteinte, même en défilant à la main.
-const liens = [...document.querySelectorAll('nav a[href^="#"]')];
+const liens = [...document.querySelectorAll('header nav a[href^="#"]')];
 const rubriques = liens.map(lien => document.querySelector(lien.getAttribute('href')));
+
+// L’en-tête peut occuper plusieurs lignes sur les petits écrans.
+new ResizeObserver(([entree]) => {
+  document.documentElement.style.scrollPaddingTop = `${entree.target.offsetHeight + 24}px`;
+  actualiserNavigation();
+}).observe(document.querySelector('header'));
+
+function ouvrirRubriqueCiblee() {
+  const cible = document.getElementById(location.hash.slice(1));
+  if (!cible) return;
+  for (let parent = cible.parentElement; parent; parent = parent.parentElement) {
+    if (parent.tagName === 'DETAILS') parent.open = true;
+  }
+}
 
 function actualiserNavigation() {
   const decalage = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop);
@@ -24,4 +38,6 @@ function actualiserNavigation() {
 window.addEventListener('scroll', actualiserNavigation, { passive: true });
 window.addEventListener('resize', actualiserNavigation);
 window.addEventListener('load', actualiserNavigation);
+window.addEventListener('hashchange', ouvrirRubriqueCiblee);
+ouvrirRubriqueCiblee();
 actualiserNavigation();
