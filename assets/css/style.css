@@ -80,7 +80,7 @@ h2 { margin: 1.5rem 0; font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 500
 .presentation { max-width: 560px; color: var(--texte-secondaire); font-size: 1.05rem; line-height: 1.8; }
 .presentation strong { color: var(--blanc); font-weight: 600; }
 .documents { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-button {
+button, .documents a {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -92,6 +92,28 @@ button {
   font: inherit;
 }
 button:disabled { cursor: not-allowed; }
+body:has(#apercu-cv[open]) { overflow: hidden; }
+#apercu-cv { width: 90vw; max-width: 1100px; height: 88dvh; max-height: 94dvh; padding: 0; border: 0; background: transparent; color: var(--texte); }
+#apercu-cv::backdrop { background: #08061199; animation: voile-cv .2s ease-out; }
+#apercu-cv[open] { display: flex; flex-direction: column; gap: .75rem; animation: ouverture-cv .22s ease-out; }
+#apercu-cv[open].closing { animation: fermeture-cv .2s ease-in forwards; }
+#apercu-cv.closing::backdrop { animation: voile-cv .2s ease-in reverse forwards; }
+.cv-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; padding: .75rem 1rem; border-radius: 6px; background: #110c28cc; }
+.cv-toolbar h2 { margin: 0; margin-right: auto; font-size: 1.1rem; }
+.cv-toolbar a { text-decoration: underline; }
+#apercu-cv iframe { flex: 1; width: 100%; min-height: 0; border: 0; background: white; }
+@keyframes ouverture-cv {
+  from { opacity: 0; transform: translateY(12px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes voile-cv {
+  from { background: #08061100; }
+  to { background: #08061199; }
+}
+@keyframes fermeture-cv {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(12px) scale(.98); }
+}
 .document-note { color: var(--texte-discret); font-size: .8rem; }
 .portrait { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border: 5px solid var(--blanc); }
 .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transform: scale(1.12); }
@@ -154,6 +176,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; border-top: 1
 }
 
 @media (prefers-reduced-motion: reduce) {
+  #apercu-cv[open], #apercu-cv[open].closing, #apercu-cv::backdrop, #apercu-cv.closing::backdrop { animation: none; }
   html, .project-track { scroll-behavior: auto; }
   summary::before { transition: none; }
 }

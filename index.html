@@ -6,9 +6,10 @@
     <meta name="description" content="Portfolio de Patricia BELLE BONO, Technicienne Support IT en alternance et étudiante en BTS SIO option SISR à IPSSI Paris.">
     <title>Patricia BELLE BONO — Portfolio BTS SIO</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=cv-4">
     <script src="assets/js/navigation.js" defer></script>
     <script src="assets/js/interactions.js" defer></script>
+    <script src="assets/js/cv.js?v=2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#accueil">Aller au contenu</a>
@@ -16,8 +17,8 @@
       <div class="header-profile">
         <a class="identity" href="#accueil">Patricia <strong>BELLE BONO</strong></a>
         <div class="socials" aria-label="Réseaux professionnels">
-          <a href="https://www.linkedin.com/in/patriciabellebono/" aria-label="Profil LinkedIn de Patricia BELLE BONO"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><circle cx="6" cy="7" r="1.5" fill="var(--fond)"/><path d="M5 10h2v9H5zm5 0h2v1c1-2 7-2 7 3v5h-2v-5c0-3-5-3-5 0v5h-2z" fill="var(--fond)"/></svg></a>
           <a href="https://github.com/patriciablbn" aria-label="Profil GitHub de Patricia BELLE BONO"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.5v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 5 18.3 5.3 18.3 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.5A11.5 11.5 0 0 0 12 .7z"/></svg></a>
+          <a href="https://www.linkedin.com/in/patriciabellebono/" aria-label="Profil LinkedIn de Patricia BELLE BONO"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><circle cx="6" cy="7" r="1.5" fill="var(--fond)"/><path d="M5 10h2v9H5zm5 0h2v1c1-2 7-2 7 3v5h-2v-5c0-3-5-3-5 0v5h-2z" fill="var(--fond)"/></svg></a>
         </div>
       </div>
       <nav aria-label="Navigation principale">
@@ -39,12 +40,12 @@
           <p class="greeting">Bonjour, je suis</p>
           <h1 id="nom">Patricia<br><span>BELLE BONO</span></h1>
           <h2>Technicienne Support IT</h2>
-          <p class="presentation">Technicienne Support IT en alternance au sein de la DSI de <strong>Africa Global Logistic (AGL)</strong>, je prépare un <strong>BTS SIO option SISR à IPSSI Paris</strong></p>
-          <div class="documents" aria-label="Documents à venir">
-            <button disabled>CV <span aria-hidden="true">↗</span></button>
+          <p class="presentation">En alternance au sein de la Direction des Systèmes d'Information de <strong>Africa Global Logistic (AGL)</strong>, je prépare un <strong>BTS SIO option SISR à IPSSI Paris</strong></p>
+          <div class="documents" aria-label="Documents">
+            <button type="button" id="ouvrir-cv" aria-haspopup="dialog" aria-controls="apercu-cv">CV <span aria-hidden="true">↗</span></button>
             <button disabled>Tableau de synthèse <span aria-hidden="true">↗</span></button>
           </div>
-          <p class="document-note">Documents bientôt disponibles</p>
+          <p class="document-note">Tableau de synthèse bientôt disponible</p>
         </div>
         <figure class="portrait">
           <img src="assets/images/patricia-belle-bono.jpeg" alt="Portrait professionnel de Patricia BELLE BONO" width="2560" height="3840" fetchpriority="high">
@@ -108,10 +109,10 @@
         <h2 id="titre-entreprise">Entreprise</h2>
         <div class="about-text">
           <h3>Africa Global Logistic (AGL)</h3>
-          <p class="institution">Puteaux 92 · Alternance · sept. 2025 - juil. 2027</p>
+          <!-- <p class="institution">Puteaux, 92 · Alternance · sept. 2025 - juil. 2027</p> -->
           <p>En alternance chez Ascens Paris, j’exerce comme <strong>Technicienne Support IT au sein de la DSI d’AGL</strong></p>
 
-          <h3>Mes deux services</h3>
+          <h3>Mon rôle</h3>
           <p>Mon activité se partage entre le <strong>Support IT</strong>, où je réalise les missions d’assistance et de préparation des équipements, et l’équipe <strong>Architecture/Audit</strong>, que je découvre progressivement depuis janvier 2026</p>
           <h3>Mes missions</h3>
           <details>
@@ -230,6 +231,15 @@
         </div>
       </section>
     </main>
+
+    <dialog id="apercu-cv" aria-labelledby="titre-cv">
+      <div class="cv-toolbar">
+        <h2 id="titre-cv">Mon CV</h2>
+        <a href="assets/documents/CV_Patricia_BELLE_BONO.pdf" download>Télécharger le PDF</a>
+        <button type="button" id="fermer-cv" autofocus>Fermer</button>
+      </div>
+      <iframe title="CV de Patricia BELLE BONO — lecteur PDF" data-src="assets/documents/CV_Patricia_BELLE_BONO.pdf#zoom=70"></iframe>
+    </dialog>
 
     <footer>
       <span>Patricia BELLE BONO</span>
