@@ -6,10 +6,10 @@
     <meta name="description" content="Portfolio de Patricia BELLE BONO, Technicienne Support IT en alternance et étudiante en BTS SIO option SISR à IPSSI Paris.">
     <title>Patricia BELLE BONO — Portfolio BTS SIO</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="assets/css/style.css?v=cv-4">
+    <link rel="stylesheet" href="assets/css/style.css?v=cv-7">
     <script src="assets/js/navigation.js" defer></script>
     <script src="assets/js/interactions.js" defer></script>
-    <script src="assets/js/cv.js?v=2" defer></script>
+    <script src="assets/js/cv.js?v=3" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#accueil">Aller au contenu</a>
@@ -235,10 +235,16 @@
     <dialog id="apercu-cv" aria-labelledby="titre-cv">
       <div class="cv-toolbar">
         <h2 id="titre-cv">Mon CV</h2>
+        <button type="button" id="reduire-cv" aria-label="Réduire le CV">−</button>
+        <button type="button" id="agrandir-cv" aria-label="Agrandir le CV">+</button>
+        <button type="button" id="ajuster-cv">Vue entière</button>
         <a href="assets/documents/CV_Patricia_BELLE_BONO.pdf" download>Télécharger le PDF</a>
+        <a href="assets/documents/CV_Patricia_BELLE_BONO.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le CV dans un nouvel onglet">Nouvel onglet <span aria-hidden="true">↗</span></a>
         <button type="button" id="fermer-cv" autofocus>Fermer</button>
       </div>
-      <iframe title="CV de Patricia BELLE BONO — lecteur PDF" data-src="assets/documents/CV_Patricia_BELLE_BONO.pdf#zoom=70"></iframe>
+      <div class="cv-preview" tabindex="0" aria-label="Aperçu du CV, défilable après agrandissement">
+        <img id="image-cv" data-src="assets/documents/CV_Patricia_BELLE_BONO.png" width="1697" height="2400" alt="Aperçu du CV de Patricia BELLE BONO. Le PDF complet est disponible via le lien Télécharger le PDF">
+      </div>
     </dialog>
 
     <footer>

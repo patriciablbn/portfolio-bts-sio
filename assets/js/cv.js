@@ -1,12 +1,39 @@
 // Un bouton ouvre le lecteur sans changer l’adresse du portfolio.
 const fenetreCV = document.getElementById('apercu-cv');
 const boutonCV = document.getElementById('ouvrir-cv');
+const imageCV = document.getElementById('image-cv');
+const zoneCV = document.querySelector('.cv-preview');
+let zoomCV = 1;
+
+function afficherZoomCV() {
+  const largeur = Math.min(zoneCV.clientWidth - 24, (zoneCV.clientHeight - 24) * 1697 / 2400);
+  imageCV.style.width = `${Math.max(1, largeur) * zoomCV}px`;
+}
+
+function ajusterCV() {
+  zoomCV = 1;
+  afficherZoomCV();
+  zoneCV.scrollTo(0, 0);
+}
 
 boutonCV.addEventListener('click', () => {
-  const lecteur = fenetreCV.querySelector('iframe');
-  if (!lecteur.hasAttribute('src')) lecteur.src = lecteur.dataset.src;
+  if (!imageCV.hasAttribute('src')) imageCV.src = imageCV.dataset.src;
   fenetreCV.showModal();
+  ajusterCV();
 });
+
+document.getElementById('agrandir-cv').addEventListener('click', () => {
+  zoomCV = Math.min(4, zoomCV * 1.25);
+  afficherZoomCV();
+});
+document.getElementById('reduire-cv').addEventListener('click', () => {
+  zoomCV = Math.max(.5, zoomCV / 1.25);
+  afficherZoomCV();
+});
+document.getElementById('ajuster-cv').addEventListener('click', ajusterCV);
+new ResizeObserver(() => {
+  if (fenetreCV.open) afficherZoomCV();
+}).observe(zoneCV);
 
 function fermerCV() {
   if (fenetreCV.classList.contains('closing')) return;
