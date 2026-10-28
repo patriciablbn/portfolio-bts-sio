@@ -52,6 +52,15 @@ function actualiserNavigation() {
     if (index === active) lien.setAttribute('aria-current', 'location');
     else lien.removeAttribute('aria-current');
   });
+  // Garder le lien actif visible dans le menu horizontal des petits écrans.
+  const menu = liens[active].parentElement;
+  const lienActif = liens[active];
+  if (menu.scrollWidth > menu.clientWidth) {
+    const position = lienActif.getBoundingClientRect();
+    const cadre = menu.getBoundingClientRect();
+    if (position.left < cadre.left) menu.scrollLeft -= cadre.left - position.left;
+    else if (position.right > cadre.right) menu.scrollLeft += position.right - cadre.right;
+  }
 }
 
 window.addEventListener('scroll', actualiserNavigation, { passive: true });
