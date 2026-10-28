@@ -2,6 +2,25 @@
 const liens = [...document.querySelectorAll('header nav a[href^="#"]')];
 const rubriques = liens.map(lien => document.querySelector(lien.getAttribute('href')));
 
+// Replier les autres rubriques avant de calculer la destination du défilement.
+document.querySelectorAll('header a[href^="#"]').forEach(lien => {
+  lien.addEventListener('click', async evenement => {
+    if (evenement.ctrlKey || evenement.metaKey || evenement.shiftKey || evenement.altKey) return;
+    evenement.preventDefault();
+    const cible = document.querySelector(lien.getAttribute('href'));
+    const fermetures = [];
+    document.querySelectorAll('details[open]').forEach(bloc => {
+      if (!cible.contains(bloc) || cible.id === 'accueil') {
+        bloc.dispatchEvent(new CustomEvent('fermer-rubrique', { detail: fermetures }));
+      }
+    });
+    await Promise.all(fermetures);
+    history.pushState(null, '', lien.getAttribute('href'));
+    cible.scrollIntoView();
+    actualiserNavigation();
+  });
+});
+
 // L’en-tête peut occuper plusieurs lignes sur les petits écrans.
 new ResizeObserver(([entree]) => {
   document.documentElement.style.scrollPaddingTop = `${entree.target.offsetHeight + 24}px`;

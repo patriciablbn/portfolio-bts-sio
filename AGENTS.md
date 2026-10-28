@@ -1,6 +1,8 @@
 # Consignes du portfolio personnel
 
 ## Collaboration
+- Aperçus de documents : cadre apparent avec fond violet plus opaque et bordure discrète. Seul un clic à l’extérieur du cadre ferme l’aperçu avec son animation, sans changer la position dans le portfolio. Ne pas fermer au clic dans le cadre, même dans l’espace vide, ni sur le document, les commandes ou les barres de défilement. Même comportement à reprendre pour le tableau de synthèse.
+- Tous les liens externes doivent s’ouvrir dans un nouvel onglet avec `target="_blank"` et `rel="noopener"`. Au choix d’une autre rubrique dans l’en-tête, refermer les menus de la rubrique quittée avant de défiler, pour éviter les décalages de position.
 - Style du site : ne pas mettre de point final aux paragraphes ; conserver la ponctuation entre les phrases et les points des abréviations.
 - Organisation Git : travailler sur une branche par étape cohérente, avec des noms explicites (`chore/…`, `feat/…`, `fix/…`). Garder `main` comme version validée. Préparer les changements localement, vérifier et expliquer le diff, puis obtenir la validation de la propriétaire avant publication ou fusion. Ne pas créer une branche par petite retouche. Ne pas réécrire l'historique partagé ni supprimer de branche distante sans décision explicite.
 - Travailler étape par étape, avec une explication courte du code et des choix.
@@ -11,6 +13,7 @@
 - Travailler localement dans ce dépôt. Ne pas créer de deuxième copie, supprimer les fichiers existants, publier, pousser ou modifier l'historique Git sans décision explicite sur l'action et son périmètre.
 
 ## Exigences confirmées
+- École, 28 octobre : logo PNG fourni par la propriétaire, petit format avec cadre blanc et lien explicite vers https://ecole-ipssi.com/. Présentation du BTS : introduction générale, puis SISR et SLAM en deux blocs indentés, en utilisant leurs intitulés complets. La propriétaire suit SISR.
 - Aperçu documentaire validé : fenêtre superposée avec voile sombre, animations douces à l’ouverture/fermeture, vue entière en hauteur par défaut, zoom +/−, retour à la vue entière, téléchargement du PDF original et ouverture du PDF dans un nouvel onglet. Aucun outil d’annotation dans l’aperçu du site ; le lecteur du nouvel onglet dépend du navigateur. Reprendre ces fonctionnalités pour le tableau de synthèse quand sa version finale sera fournie. Le CV utilise un aperçu image fidèle ; régénérer cette image si le PDF change.
 - Ajustements suivants du 26 octobre : réseaux sociaux avec logos SVG locaux et URL LinkedIn https://www.linkedin.com/in/patriciabellebono/ ; À propos et Mon parcours reviennent en lecture directe, titres latéraux alignés dans la même colonne. Missions Entreprise et épreuves fermées par défaut. École : deux blocs repliables « IPSSI » et « BTS SIO ». Ouverture et fermeture douces des blocs, désactivées en réduction des mouvements. Menu projets : texte blanc, accent au survol, trait sous le projet actif, également actualisé au défilement horizontal.
 - Mise à jour du 26 octobre 2026 : priorité à une structure compacte, avec sous-rubriques ouvrables/fermables. « À propos » rassemble profil, approche, projet professionnel et timeline, sans double rubrique « Mon parcours ». Entreprise : présenter les deux services avant les missions repliables ; présentation générale du groupe à faire en dernier.

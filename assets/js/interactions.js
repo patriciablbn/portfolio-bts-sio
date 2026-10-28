@@ -6,18 +6,17 @@ document.querySelectorAll('details').forEach(bloc => {
   let ouvert = bloc.open;
   let animation;
 
-  titre.addEventListener('click', evenement => {
-    evenement.preventDefault();
+  function changerEtat(ouvrir) {
     const hauteurDepart = bloc.getBoundingClientRect().height;
     if (animation) animation.cancel();
-    ouvert = !ouvert;
+    ouvert = ouvrir;
     bloc.open = ouvert;
     bloc.classList.toggle('closing', !ouvert);
 
     if (mouvementReduit.matches) {
       bloc.style.overflow = '';
       bloc.classList.remove('closing');
-      return;
+      return Promise.resolve();
     }
 
     const hauteurFin = bloc.getBoundingClientRect().height;
@@ -33,6 +32,15 @@ document.querySelectorAll('details').forEach(bloc => {
       bloc.classList.remove('closing');
       animation = null;
     };
+    return animation.finished.catch(() => {});
+  }
+
+  titre.addEventListener('click', evenement => {
+    evenement.preventDefault();
+    changerEtat(!ouvert);
+  });
+  bloc.addEventListener('fermer-rubrique', evenement => {
+    if (ouvert) evenement.detail.push(changerEtat(false));
   });
 });
 

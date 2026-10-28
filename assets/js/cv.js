@@ -52,6 +52,12 @@ function fermerCV() {
 }
 
 document.getElementById('fermer-cv').addEventListener('click', fermerCV);
+fenetreCV.addEventListener('click', evenement => {
+  if (evenement.target !== fenetreCV) return;
+  const cadre = fenetreCV.getBoundingClientRect();
+  if (evenement.clientX < cadre.left || evenement.clientX > cadre.right ||
+      evenement.clientY < cadre.top || evenement.clientY > cadre.bottom) fermerCV();
+});
 fenetreCV.addEventListener('cancel', evenement => {
   evenement.preventDefault();
   fermerCV();

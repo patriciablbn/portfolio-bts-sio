@@ -93,7 +93,7 @@ button, .documents a {
 }
 button:disabled { cursor: not-allowed; }
 body:has(#apercu-cv[open]) { overflow: hidden; }
-#apercu-cv { width: 90vw; max-width: 1100px; height: 88dvh; max-height: 94dvh; padding: 0; border: 0; background: transparent; color: var(--texte); }
+#apercu-cv { width: 90vw; max-width: 1100px; height: 88dvh; max-height: 94dvh; padding: .75rem; border: 1px solid var(--bordure); border-radius: 8px; background: #110c28ed; color: var(--texte); }
 #apercu-cv::backdrop { background: #080611b8; animation: voile-cv .2s ease-out; }
 #apercu-cv[open] { display: flex; flex-direction: column; gap: .75rem; animation: ouverture-cv .22s ease-out; }
 #apercu-cv[open].closing { animation: fermeture-cv .2s ease-in forwards; }
@@ -159,6 +159,11 @@ details[open]:not(.closing) > summary::before { transform: rotate(90deg); }
 summary:focus-visible, .project-track:focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; }
 .disclosure-content { padding-top: 1rem; }
 .disclosure-content h3 { margin-top: 1rem; }
+.school-link { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; color: var(--accent); font-size: .9rem; }
+.school-link img { display: block; width: 80px; height: 80px; border: 3px solid var(--blanc); object-fit: contain; }
+.school-link:hover span { text-decoration: underline; }
+.bts-option { margin-top: 1.5rem; padding-left: 1rem; border-left: 2px solid var(--bordure); }
+.bts-option h3 { font-size: 1rem; }
 .institution { color: var(--texte-discret); font-size: .9rem; }
 .project-content { min-width: 0; width: 100%; }
 .project-nav { margin-bottom: 1rem; }
