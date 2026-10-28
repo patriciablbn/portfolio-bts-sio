@@ -23,6 +23,7 @@
 }
 
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 html { scroll-behavior: smooth; scroll-padding-top: 9rem; }
 body {
   margin: 0;
@@ -56,6 +57,7 @@ header {
 .socials a { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: var(--texte); }
 .socials svg { width: 22px; height: 22px; }
 .socials a:hover { color: var(--accent); }
+header nav { min-width: 0; }
 nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: .9rem; color: var(--texte); }
 nav a { padding-bottom: .4rem; border-bottom: 2px solid transparent; }
 nav a[aria-current] { border-bottom-color: var(--navigation); }
@@ -132,6 +134,7 @@ body:has(#apercu-cv[open]) { overflow: hidden; }
 }
 .about h2 { margin: 0; color: var(--accent); }
 .about-text { max-width: 65ch; color: var(--texte-secondaire); line-height: 1.75; }
+.introduction > div, .about-text { min-width: 0; overflow-wrap: anywhere; }
 .about-text h3 { margin: 2rem 0 .75rem; color: var(--accent); font-size: 1.15rem; font-weight: 700; }
 .about-text h3:first-child { margin-top: 0; }
 .about-text p { margin: 0 0 1.25rem; }
@@ -172,16 +175,55 @@ summary:focus-visible, .project-track:focus-visible { outline: 3px solid var(--f
 .project-card h3 { margin-top: .5rem; }
 footer { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--separateur); padding-block: 1.5rem; color: var(--texte-discret); font-size: .8rem; }
 
-@media (max-width: 800px) {
-  html { scroll-padding-top: 15rem; }
-  header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-  nav { gap: 1rem; }
-  .introduction { grid-template-columns: 1fr; gap: 2.5rem; min-height: auto; padding-block: 2.5rem; }
-  .portrait { width: min(340px, 100%); }
-  .greeting { margin-top: 2rem; }
-  .about { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 2.5rem; }
+/* Tablettes : un en-tête compact, avec toutes les rubriques accessibles au doigt. */
+@media (max-width: 1100px) {
+  header { flex-direction: column; align-items: stretch; gap: .5rem; padding-block: .65rem; }
+  .header-profile { justify-content: space-between; gap: .5rem; }
+  .socials { gap: .25rem; }
+  .socials a { width: 44px; height: 44px; }
+  header nav { flex-wrap: nowrap; overflow-x: auto; gap: 1.1rem; padding: .25rem .25rem .4rem; }
+  header nav a, header nav span { display: inline-flex; flex-shrink: 0; align-items: center; min-height: 44px; white-space: nowrap; }
+  .introduction { grid-template-columns: minmax(0, 1fr) minmax(220px, 30%); gap: 2rem; padding-block: 2.5rem; min-height: auto; }
+  .about { grid-template-columns: 140px minmax(0, 1fr); gap: 1.5rem; padding-block: 2.5rem; }
+  .timeline li { grid-template-columns: 7rem minmax(0, 1fr); }
+  .cv-toolbar { gap: .5rem; padding: .5rem; font-size: .9rem; }
+}
+
+/* Téléphones : contenu sur une colonne et commandes du CV sur trois lignes. */
+@media (max-width: 700px) {
+  .identity { font-size: .9rem; }
+  .introduction { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 2rem; }
+  h1 { font-size: clamp(2rem, 8vw, 3.2rem); }
+  .portrait { width: min(280px, 100%); justify-self: center; }
+  .greeting { margin-top: 1.5rem; }
+  .about { grid-template-columns: 1fr; gap: 1.25rem; padding-block: 2rem; }
   .timeline li { grid-template-columns: 1fr; gap: .35rem; }
+  .documents { gap: .75rem; }
+  .documents > * { justify-content: space-between; }
+  .project-nav { gap: .5rem 1rem; }
+  .project-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .project-card { flex-basis: 90%; padding: 1rem; }
+  summary { min-height: 44px; }
+  #apercu-cv { width: calc(100% - 1rem); height: 94dvh; max-height: 94dvh; padding: .5rem; }
+  .cv-toolbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; font-size: .85rem; }
+  .cv-toolbar h2 { grid-column: 1 / 3; grid-row: 1; }
+  #fermer-cv { grid-column: 3; grid-row: 1; }
+  #reduire-cv { grid-column: 1; grid-row: 2; }
+  #agrandir-cv { grid-column: 2; grid-row: 2; }
+  #ajuster-cv { grid-column: 3; grid-row: 2; }
+  .cv-toolbar a[download] { grid-column: 1 / 3; grid-row: 3; }
+  .cv-toolbar a[target="_blank"] { grid-column: 3; grid-row: 3; }
+  .cv-toolbar a, .cv-toolbar button { min-width: 0; padding: .35rem; white-space: normal; text-align: center; line-height: 1.2; }
   footer { flex-wrap: wrap; }
+}
+
+/* En paysage sur un téléphone, garder la hauteur pour le document. */
+@media (max-height: 500px) and (max-width: 1100px) {
+  #apercu-cv { height: 96dvh; max-height: 96dvh; }
+  .cv-toolbar { display: flex; flex-wrap: nowrap; overflow-x: auto; }
+  .cv-toolbar > * { flex-shrink: 0; white-space: nowrap; }
+  .cv-toolbar a, .cv-toolbar button { white-space: nowrap; }
+  .cv-toolbar h2 { margin-right: .5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
